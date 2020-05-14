@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ragdoll.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.2269, 17.7624 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 30, 10 )
+
+[node name="StaticBody" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 129.059, 141.907 )
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 108.036
+margin_top = 124.971
+margin_right = 148.036
+margin_bottom = 164.971
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node" parent="." instance=ExtResource( 1 )]
+position = Vector2( 125.263, 33.5787 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 82, 190 )
+shape = SubResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+margin_left = 52.0
+margin_top = 179.0
+margin_right = 114.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
